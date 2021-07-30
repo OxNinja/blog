@@ -1,0 +1,74 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: 0xNinja - My blog
+theme: PaperMod
+paginate: 5
+
+enableEmoji: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  description: "Salut a tous"
+  tags: [""]
+  author: 0xNinja
+  homeInfoParams:
+    Title: "Hello there"
+    Content: >
+      Welcome to my blog, I will post things about cybersecurity, development and Linux. For more info check my [about page](/about/) and my socials:
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/OxNinja"
+    - name: hackthebox
+      url: "https://app.hackthebox.eu/profile/100982"
+    - name: twitter
+      url: "https://twitter.com/0x_Ninja"
+
+  assets:
+    disableHLJS: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  ShowCodeCopyButtons: true
+
+menu:
+  main:
+    - identifier: about
+      name: 🥷 About
+      url: /about/
+      weight: 1
+    - identifier: archives
+      name: 📝 Archives
+      url: /archives/
+      weight: 2
+    - identifier: tags
+      name: 🏷️ Tags
+      url: /tags/
+      weight: 3
+    - identifier: projects
+      name: 🔬 Projects
+      url: /projects/
+      weight: 4
+    - identifier: search
+      name: 🔎 Search
+      url: /search/
+      weight: 5
+
+usePygmentClasses: true
+markup:
+  highlight:
+    codeFences: true
+    lineNos: true
+    style: monokai
