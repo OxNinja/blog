@@ -2,7 +2,7 @@ baseURL: https://0xninja.fr
 languageCode: en-us
 title: 0xNinja - My blog
 theme: PaperMod
-paginate: 5
+paginate: 6
 
 enableEmoji: true
 
@@ -13,8 +13,9 @@ outputs:
     - JSON
 
 params:
-  description: "Salut a tous"
-  tags: [""]
+  env: production
+  description: "I love to share ~~flags~~ knowledge, I write sometimes about CTF, challenges and other common subjects."
+  tags: ["cybersecurity", "hackthebox", "ctf"]
   author: 0xNinja
   homeInfoParams:
     Title: "Hello there"
@@ -22,8 +23,12 @@ params:
       Welcome to my blog, I will post things about cybersecurity, development and Linux. For more info check my [about page](/about/) and my socials:
 
   socialIcons:
+    - name: ctftime
+      url: "https://ctftime.org/user/48409"
     - name: github
       url: "https://github.com/OxNinja"
+    - name: gitlab
+      url: "https://git.fakenews.sh/0xNinja"
     - name: hackthebox
       url: "https://app.hackthebox.eu/profile/100982"
     - name: twitter
