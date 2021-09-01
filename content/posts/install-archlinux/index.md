@@ -292,6 +292,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 And you can reboot.
 
+### Dual boot with windows
+
+My grub did not detect my Windows partition, [this post](https://askubuntu.com/a/977251) helped me to solve the issue.
+
 ## Tips
 
 * Something is broken? You forgot to install an important package but already completed all the steps? **Do not reinstall from scratch**! Just boot on your USB, mount your system back and `chroot` into it!
