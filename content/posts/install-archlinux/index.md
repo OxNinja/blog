@@ -265,6 +265,37 @@ As its name says, lightdm is a lightweight package, it will allow you to setup y
 
 Don't forget to enable it with sysytemd: `systemctl enable lightdm`.
 
+## Post-installation troubleshouting
+
+### BIOS update broke my setup
+
+Yeah it appears that on a BIOS update, you can break your grub config. It happened to me every time as I run a dual boot alongside W*ndows. Jokes apart, it is very easy to fix things.
+
+The main issue encountered is the disapearance of Grub and so, your Arch partition. Fear not, you can fix it in only 2 steps:
+
+1. Find your bootable stick and boot on it
+2. Follow the steps:
+
+```sh
+# mount your partitions
+mount /dev/sdX3 /mnt; mount /dev/sdX4 /mnt/home; mount /dev/sdX2 /mnt/boot; mount /dev/sdX1 /mnt/boot/efi
+
+# regenerate your fstab
+genfstab -U /mnt >> /mnt/etc/fstab
+
+# reinstall grub
+arch-chroot /mnt
+mkinitcpio -p linux
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --recheck
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+And you can reboot.
+
+### Dual boot with windows
+
+My grub did not detect my Windows partition, [this post](https://askubuntu.com/a/977251) helped me to solve the issue.
+
 ## Tips
 
 * Something is broken? You forgot to install an important package but already completed all the steps? **Do not reinstall from scratch**! Just boot on your USB, mount your system back and `chroot` into it!
@@ -275,3 +306,5 @@ Don't forget to enable it with sysytemd: `systemctl enable lightdm`.
 * Disable the computer speaker BEEP: `echo blacklist pcspkr > /etc/modprobe.d/nobeep.conf`
 
 If you find something broken here, feel free to send an issue on the Github repo.
+
+As I am in some distro reinstallation process, I will update this notes on the fly.
