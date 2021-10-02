@@ -17,7 +17,7 @@ ShowReadingTime: true
 ShowBreadCrumbs: true
 ShowPostNavLinks: true
 cover:
-	image: cover.jpg
+  image: cover.jpg
 ---
 
 ## Why?
@@ -25,6 +25,8 @@ cover:
 Why not?
 
 ## Components
+
+> List and link incomming
 
 | Part        | Product      | Comment     |
 |-------------|--------------|-------------|
@@ -68,11 +70,7 @@ Trim the useless feet of the stabilizers for better stability and less noise.
 |----------------------------|--------------------------|
 | ![Before](stab_before.jpg) | ![After](stab_after.jpg) |
 
-Now we will lube the stabs.
-
-![Stabs lubing](stabs_lubing.jpg)
-
-Place your stabilizers on the PCB.
+Now we will lube the stabs and place them on the PCB.
 
 **Ref:**
 
@@ -93,6 +91,8 @@ We now want to solder the switches to the PCB.
 Put the keycaps on it and you got your brand new handmade keyboard.
 
 ![Assembled keyboard](assembled.jpg)
+
+![Not much but honest work](https://i.kym-cdn.com/entries/icons/original/000/028/021/work.jpg)
 
 ## Sound testing
 
