@@ -6,7 +6,7 @@ tags: ["hardware"]
 author: "0xNinja"
 showToc: true
 TocOpen: false
-draft: false
+draft: true
 hidemeta: false
 comments: false
 disableShare: false

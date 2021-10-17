@@ -2,7 +2,9 @@ baseURL: https://0xninja.fr
 languageCode: en-us
 title: 0xNinja - My blog
 theme: PaperMod
-paginate: 6
+paginate: 8
+
+buildDrafts: true
 
 enableEmoji: true
 
@@ -14,11 +16,11 @@ outputs:
 
 params:
   env: production
-  description: "I love to share ~~flags~~ knowledge, I write sometimes about CTF, challenges and other common subjects."
-  tags: ["cybersecurity", "hackthebox", "ctf"]
+  description: "I love to share ~~flags~~ knowledge, I write sometimes about CTF, challenges and other common subjects like Peano's arithmetic or Kerbal Space Program."
+  tags: ["cybersecurity", "hackthebox", "ctf", "blog"]
   author: 0xNinja
   homeInfoParams:
-    Title: "Hello there"
+    Title: "Hello there 👋"
     Content: >
       Welcome to my blog, I will post things about cybersecurity, development and Linux. For more info check my [about page](/about/) and my socials:
 
