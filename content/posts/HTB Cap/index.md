@@ -1,13 +1,23 @@
 ---
-title: HTB Ready
-date: 2021-07-28 13:37:00
-tags:
-- article
-- htb
-- writeup
+title: "📦 HTB - Cap"
+date: 2021-07-28 16:00:00
+tags: ["htb", "writeup"]
+author: "0xNinja"
+showToc: true
+TocOpen: false
+draft: false
+hidemeta: false
+comments: false
+disableShare: false
+disableHLJS: false
+hideSummary: false
+searchHidden: true
+ShowReadingTime: true
+ShowBreadCrumbs: true
+ShowPostNavLinks: true
+cover:
+    image: box.png
 ---
-
-![Cap](cap.png)
 
 > Simple easy box, perfect to warmup before the FIC 2021 and get more confidence in 1337 h4ck1n9
 
@@ -19,7 +29,7 @@ Find PCAP file on server, get SSH credentials, execute code as root with Python.
 
 I did not even use `nmap` here, as we had a web server serving on port `tcp:80`. This website looked like this:
 
-![Cap index](cap_index.png)
+![Cap index](index.png)
 
 It seems to be a security dashboard for a server, we don't have any info about that. We have multiple endpoints on the server :
 
@@ -106,7 +116,7 @@ if __name__ == "__main__":
         app.run("0.0.0.0", 80, debug=True)
 ```
 
-I removed some code for readability but you get the idea. The important stuff is the `os.setuid(0)` part.
+I removed some code for readability but you get the idea. The important stuff is the `os.setuid(0)` part. If you want the complete code, [check it here](app.py).
 
 ### Exploit
 
@@ -130,4 +140,4 @@ Then I started the server in the SSH connection: `nathan@cap: python3 app.py`, a
 
 And voilà.
 
-![Cap rooted](cap_rooted.png)
+![Cap rooted](rooted.png)
