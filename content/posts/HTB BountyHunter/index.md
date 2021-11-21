@@ -50,7 +50,7 @@ $testuser = "test";
 ?>
 ```
 
-[...]
+With leaking `/etc/passwd` we got our target, the user `developement`. We can SSH eith the `$dbpassword`.
 
 ## Privesc
 
