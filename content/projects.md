@@ -6,7 +6,7 @@ title: "Projects"
 > * https://github.com/OxNinja
 > * https://git.fakenews.sh
 
-## [CTF Kit](https://git.fakenews.sh/ctfkit/ctfkit)
+## [CTF Kit](https://git.fakenews.sh/ctfkit/ctfkit) (mirrored on [Github](https://github.com/Team-FakeNews/CTFKit))
 
 A CLI tool to automate CTF deployment. Focus on the challenges 🚩
 

@@ -2,11 +2,11 @@
 title: "🪛 Build your own mechanical keyboard"
 date: 2021-10-02T13:00:28+02:00
 summary: "A simple and quick summary on how to build a mechnical keyboard on your own from scratch."
-tags: ["hardware"]
+tags: ["diy", "hardware"]
 author: "0xNinja"
 showToc: true
 TocOpen: false
-draft: true
+draft: false
 hidemeta: false
 comments: false
 disableShare: false
@@ -26,19 +26,19 @@ Why not?
 
 ## Components
 
-> List and link incomming
+> I bought all the parts on [kbdfans.com](https://kbdfans.com), but you can find a lot of things on other websites. Be careful on the shipping tho!
 
-| Part        | Product      | Comment     |
-|-------------|--------------|-------------|
-| Switches    | Gatheron red | linear, x70 |
-| Stabilizers |  |  |
-| PCB         |  |  |
-| Plate       |  |  |
-| Backplate   |  |  |
-| Keycaps     |  |  |
-| Lube        |  |  |
+| Part        | Product     | Comment     |
+|-------------|-------------|-------------|
+| Switches    | Gateron red | linear, x70 |
+| Stabilizers | Cherry Screw-in Stabs 60 set |  |
+| PCB         | KBD67 rev2 65% PCB | RGB, VIA support, USB-C |
+| Plate       | Aluminium plate |  |
+| Backplate   | TADA68 Low Profile Aluminum Case |  |
+| Keycaps     | Generic caps |  |
+| Lube        | PCMasterrace lube |  |
 
-> Tip: buy a lube station and a switch disassembler for more confort
+> Tip: buy a [lube station](https://kbdfans.com/products/kbdfans-lube-tools-collection-1) and a [switch disassembler](https://kbdfans.com/collections/switch-opener) for more confort
 
 ## Switches
 
@@ -103,3 +103,9 @@ Put the keycaps on it and you got your brand new handmade keyboard.
 | Ducky One 2 (MX brown)       | [mp3](k_duck.mp3) |
 | Keychron k3 (MX brown lubed) | [mp3](k_keyc.mp3) |
 | Mine (Gatheron red lubed)    | [mp3](k_mine.mp3) |
+
+## Configure keyboard with VIA
+
+[VIA](https://caniusevia.com/) is an open source software to help you configure your keyboard: adding layers (like Fn key), macros and so on.
+
+I used it in order to add a function on my right control key, to unlock a new layer on the keyboard, I can now use F1-F10 keys easily.
