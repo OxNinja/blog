@@ -94,4 +94,13 @@ git push -u origin my-branch
 
 # update your submodules
 git submodule update --remote --merge
+
+# delete a commit
+git commit -amend
+
+# temporary discard your local changes
+git stash
+
+# config your git variables
+git config user.name PouetPouet
 ```
