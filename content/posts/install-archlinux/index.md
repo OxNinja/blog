@@ -20,16 +20,18 @@ cover:
     image: cover.gif
 ---
 
+> :warning: Now Archlinux embeeds an install script which you can run with `archinstall`, this blog post is here for curious people wanting to know how to install things from scratch and know how a Linux system works.
+
 > I recently installed Archlinux on my laptop, let me help you for a fresh new install, step by step, with all commands and tips I learnt.
 
 After closing around 30-40 navigation pages on my phone after **every new installation**, I decided to take notes of my mistakes and the tips I learnt of my past experiences in this post.
 
 Disclaimer: I based all my previous installations on the following, therefor some content will be very similar, if not the same.
 
-* https://archlinux.org/
-* https://wiki.archlinux.fr/installation
-* https://github.com/FredBezies/arch-tuto-installation/blob/master/install.md (:fr:)
-* https://driikolu.fr/2020/03/install_arch_chiffre_uefi/ (:fr:)
+* <https://archlinux.org/>
+* <https://wiki.archlinux.fr/installation>
+* <https://github.com/FredBezies/arch-tuto-installation/blob/master/install.md> (:fr:)
+* <https://driikolu.fr/2020/03/install_arch_chiffre_uefi/> (:fr:)
 
 I recommend to read [the tips](#tips) if you have an issue with something (`Ctrl-f` should work), or want to learn a bit more.
 
@@ -188,6 +190,7 @@ pacman -S grub efibootmgr
 Setup the kernel modules and install Grub on the system:
 
 ```sh
+arch-chroot /mnt
 mkinitcpio -p linux
 
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --recheck /dev/sdX
@@ -239,7 +242,7 @@ git clone https://aur.archlinux.org/polybar
 cd polybar; makepkg -isc
 ```
 
-Once installed you can find cool themes at https://github.com/adi1090x/polybar-themes you will find installation and setup instructions on the repo.
+Once installed you can find cool themes at <https://github.com/adi1090x/polybar-themes> you will find installation and setup instructions on the repo.
 
 You can add an entry for the bar to launch on login in your i3 config:
 
@@ -250,7 +253,7 @@ vim ~/.config/i3/config
 
 ### rofi
 
-I use rofi for my application launcher and power menu, see https://github.com/adi1090x/rofi for more info.
+I use rofi for my application launcher and power menu, see <https://github.com/adi1090x/rofi> for more info.
 
 Add a system bind on your config:
 
