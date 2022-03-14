@@ -4,12 +4,13 @@ title: "About"
 
 ![Bonjour](https://media.giphy.com/media/dBCh3ktuUekw5OMJqg/giphy.gif)
 
-French ingeneering student in cybersecurity, I like the web, reverse and assembly.
+French engineering student in cybersecurity, I like the web, reverse, crafting ELF and assembly.
 
 I participate in CTFs with my team [FakeNews](https://fakenews.sh). I mostly do the web challenge because this is the easiest when you begin in cybersecurity. :innocent:
 
 * [CTF InterIUT 2020](https://twitter.com/CTF_Inter_IUT) staff 🏁
 * [Norzh CTF 2021](https://norzh-ctf.fr) staff 🧭
+* [Comming soon] staff 🏦
 
 # Why this website
 
@@ -24,4 +25,3 @@ The idea is to present subjects linked with security, for all levels (beginner t
 [GitHub](https://github.com/OxNinja)
 
 [Root-Me](https://www.root-me.org/0xNinja) | [HacktTheBox](https://app.hackthebox.eu/profile/100982) | [TryHackMe](https://tryhackme.com/p/0xNinja)
-
