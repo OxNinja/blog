@@ -22,6 +22,8 @@ cover:
 
 To make things short, I saw [How to write a virtual machine in order to hide your viruses and break your brain forever](https://tmpout.sh/2/7.html) by [@s01den](https://twitter.com/s01den) published in [tmp.out](https://tmpout.sh)'s second edition. This new paper made me enjoy (once again) low-level. I wanted to know more about this abstract subject of "virtual machines" in reverse engineering, so I read it and started to implement my own VM in assembly!
 
+> You will find my code on [my Github repo](https://github.com/OxNinja/nasm_/blob/main/vm/vm.asm)
+
 ## Why assembly?
 
 I wanted to understand everything I did during this process, and needed to stick with the lowest level I could, I will talk about the future of this project at the end of the post.
@@ -35,9 +37,21 @@ Before staring to type very fast on my keyboard, I needed to put things on a pap
 I had to answer a few questions:
 
 * What is an instruction?
+
+  It's like a function, or an alias to some code to execute
+  
 * How does the CPU knows what to do with an instruction?
+
+  The code an instruction represents is written for the CPU, so it is seamless
+  
 * How can I make custom instructions?
+
+  Just implemet some functions or code blocks, then map them to a custom "OPcode"
+  
 * How can I make the CPU execute my custom instructions?
+
+  Make a simple condition on the custom OPcode, and execute the code mapped to it
+  
 
 ## PoC
 
