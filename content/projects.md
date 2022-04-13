@@ -28,4 +28,5 @@ French documentation websites about science in general, separated by classes and
 
 * [📐 Mathematics](https://maths.0xninja.fr)
 * [🔭 Physics](https://physiques.0xninja.fr) (I talk about Kerbal Space Program too)
+* [🖥 Networks](https://reseau.0xninja.fr)
 * Some more incomming such as hardware, chemistry, programing...
