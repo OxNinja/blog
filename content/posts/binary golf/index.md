@@ -35,7 +35,7 @@ Crafting the smallest binary which does a particular task.
 
 It is recommanded to code in assembly in order to manage your headers as you wish.
 
-We can handcraft binaries, because `GCC` is a bit messy when compiling code ans linking stuff. We can then make sections or headers overlap to save more space.
+We can handcraft binaries, because `GCC` is a bit messy when compiling code and linking stuff. We can then make sections or headers overlap to save more space.
 
 > In brief, the section header table is for use by the compiler and linker, while the program header table is for use by the program loader.
 > The program header table is optionnal and never present in practice, the section header table is also optional but always present.
@@ -87,7 +87,7 @@ dw 2                            ; e_type
 dw 3                            ; e_machine
 dd 1                            ; e_version
 dd _start                       ; e_entry
-dd phdr - $$                    ; e_phoff
+dd phdr-$$                      ; e_phoff
 dd 0                            ; e_shoff
 dd 0                            ; e_flags
 dw ehdrsize                     ; e_ehsize
@@ -97,7 +97,7 @@ dw 0                            ; e_shentsize
 dw 0                            ; e_shnum
 dw 0                            ; e_shstrndx
 
-ehdrsize equ$ - ehdr
+ehdrsize equ $-ehdr
 
 phdr:                           ; Elf32_Phdr
 dd 1                            ; p_type
@@ -109,13 +109,13 @@ dd filesize                     ; p_memsz
 dd 5                            ; p_flags
 dd 0x1000                       ; p_align
 
-phdrsize equ$ - phdr
+phdrsize equ $-phdr
 
 _start:
 
 ; your program here
 
-filesize equ$ - $$
+filesize equ $-$$
 ```
 
 ### Unethical stuff
@@ -131,7 +131,7 @@ section .text
 
 #### Use header as code section
 
-**🧠** big brain move here: put code in the header
+🧠 Big brain move here: put code in the header
 
 ```asm
 ehdr:
@@ -142,7 +142,7 @@ _start:
 	xor eax, eax
 	inc eax
 	int 0x80
-	;; continue le header
+	;; continue the header
 	dw 2
 	dw 3
 	dw 1
@@ -151,7 +151,12 @@ _start:
 
 ### Golfing resources
 
+A while ago I created a repo containing some random assembly programs I did, I added my try to make a tiny `Hello world` binary: https://github.com/OxNinja/nasm_/tree/main/elf-golfing
+
 https://codegolf.stackexchange.com/questions/5696/shortest-elf-for-hello-world-n
+
 [Create tiny ELF for Linux](https://www.muppetlabs.com/~breadbox/software/tiny/teensy.html)
+
 https://www.muppetlabs.com/~breadbox/software/tiny/
+
 [Analyzing ELF with malformed headers](https://binaryresearch.github.io/2019/09/17/Analyzing-ELF-Binaries-with-Malformed-Headers-Part-1-Emulating-Tiny-Programs.html)
