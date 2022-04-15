@@ -59,7 +59,7 @@ I had to answer a few questions:
 
 To (re)set registers, code is very straightforward and don't really need explainations, right?
 
-```assembly
+```asm
 reset_registers:
   push rbp
   mov rbp, rsp
@@ -91,7 +91,7 @@ Yes, some very basic instructions.
 
 The concept here is to compare `rax`, our opcode register and then call the corresponding function:
 
-```assembly
+```asm
 ;; if opcode == 0x1:
 ;;   mov_a_b()
 cmp rax, 0x1
