@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "About me and this blog"
 ---
 
 ![Bonjour](https://media.giphy.com/media/dBCh3ktuUekw5OMJqg/giphy.gif)
