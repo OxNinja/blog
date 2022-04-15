@@ -1,7 +1,7 @@
 ---
 title: "🏌️ Binary golfing - Introduction"
 date: 2022-04-15 16:00:00
-tags: ["binary", "elf", "golf", low-level"]
+tags: ["binary", "elf", "golf", "low-level"]
 author: "0xNinja"
 showToc: true
 TocOpen: false
