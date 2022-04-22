@@ -92,6 +92,9 @@ git checkout -b my-branch
 vim ...; git add ...; git commit ...
 git push -u origin my-branch
 
+# tag a commit
+git tag -a v1.0 -m "My description of the tag"
+
 # merge my-branch into master
 git checkout master
 git merge my-branch
