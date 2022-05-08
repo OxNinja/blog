@@ -2,21 +2,11 @@
 title: "📦 HTB - Schooled"
 date: 2021-08-04 13:00:00
 tags: ["htb", "writeup"]
+categories: ["HTB"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: box.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 > Cool box, not too CTF-like and real-life applicable, my first FreeBSD :smile: But root part was too quick.

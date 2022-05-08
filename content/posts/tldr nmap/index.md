@@ -2,22 +2,9 @@
 title: "🚀 TL;DR - nmap"
 date: 2021-05-04 12:30:00
 summary: "Maybe the most used tool when it comes to network discovery and port knocking."
-tags:
-- tldr
-- nmap
+tags: ["tldr", "nmap"]
+categories: ["TL;DR"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
 ---
 
 ## `nmap`

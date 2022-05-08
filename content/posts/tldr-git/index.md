@@ -3,19 +3,8 @@ title: "🚀 TL;DR - Git"
 date: 2021-10-17T10:39:42+02:00
 summary: "You want to know how to use Git as a chad developper?"
 tags: ["dev", "git", "tldr"]
+categories: ["TL;DR"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: true
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
 ---
 
 ## Git :fire:

@@ -1,5 +1,7 @@
 ---
-title: "About me and this blog"
+title: "About"
+showReadingTime: false
+showDate: false
 ---
 
 ![Bonjour](https://media.giphy.com/media/dBCh3ktuUekw5OMJqg/giphy.gif)

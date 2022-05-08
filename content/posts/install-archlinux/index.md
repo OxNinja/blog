@@ -4,20 +4,9 @@ date: 2021-08-18T11:06:28+02:00
 summary: "I recently installed once again Archlinux on a laptop. Let me explain how to do so."
 tags: ["archlinux", "tutorial"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: cover.gif
+resources:
+- name: "featured-image"
+  src: "featured-image.gif"
 ---
 
 > :warning: Now Archlinux embeeds an install script which you can run with `archinstall`, this blog post is here for curious people wanting to know how to install things from scratch and know how a Linux system works.

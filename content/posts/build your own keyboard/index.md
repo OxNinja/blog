@@ -4,20 +4,9 @@ date: 2021-10-02T13:00:28+02:00
 summary: "A simple and quick summary on how to build a mechnical keyboard on your own from scratch."
 tags: ["diy", "hardware"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-  image: cover.jpg
+resources:
+- name: "featured-image"
+  src: "featured-image.jpg"
 ---
 
 ## Why?

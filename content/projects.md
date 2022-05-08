@@ -1,5 +1,7 @@
 ---
 title: "Projects"
+showReadingTime: false
+showDate: false
 ---
 
 > I made some projects, some are very interesting, and some are more for learning purposes or testing. I listed here the ones I am the more proud of, but you can get a more exhaustive list by looking here:
@@ -28,5 +30,4 @@ French documentation websites about science in general, separated by classes and
 
 * [📐 Mathematics](https://maths.0xninja.fr)
 * [🔭 Physics](https://physiques.0xninja.fr) (I talk about Kerbal Space Program too)
-* [🖥 Networks](https://reseau.0xninja.fr)
 * Some more incomming such as hardware, chemistry, programing...

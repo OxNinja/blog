@@ -2,21 +2,11 @@
 title: "📦 HTB - Ready"
 date: 2021-03-20 10:00:00
 tags: ["htb", "writeup"]
+categories: ["HTB"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: box.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 > Cool box, maybe too easy for a medium? Got reverse shell in minutes, but stuck for root's password for hours 😅

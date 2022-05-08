@@ -3,21 +3,11 @@ title: "📦 HTB - Previse"
 date: 2021-08-11 13:00:00
 summary: ""
 tags: ["htb", "writeup"]
+categories: ["HTB"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: box.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 ## TL;DR

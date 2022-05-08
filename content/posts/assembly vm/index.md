@@ -3,21 +3,12 @@ title: "🔎 Creating a VM for fun - Part 1: ASM"
 date: 2022-03-17T10:39:42+02:00
 summary: "The first part of my series on low-level learning journey, sit back, relax and enjoy me struggling for basic stuff."
 tags: ["assembly", "low-level", "reverse"]
+categories: ["Custom VM"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
 draft: true
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-  image: banner.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 To make things short, I saw [How to write a virtual machine in order to hide your viruses and break your brain forever](https://tmpout.sh/2/7.html) by [@s01den](https://twitter.com/s01den) published in [tmp.out](https://tmpout.sh)'s second edition. This new paper made me enjoy (once again) low-level. I wanted to know more about this abstract subject of "virtual machines" in reverse engineering, so I read it and started to implement my own VM in assembly!

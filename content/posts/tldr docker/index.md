@@ -2,22 +2,9 @@
 title: "🚀 TL;DR - Docker"
 date: 2021-05-04 12:00:00
 summary: "Wow you don't know yet what Docker is? 🤔 Let me introduce you this beautiful containerization tool!"
-tags:
-- docker
-- tldr
+tags: ["docker", "tldr"]
+categories: ["TL;DR"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
 ---
 
 ## Docker 🐋

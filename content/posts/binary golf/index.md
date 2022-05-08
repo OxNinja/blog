@@ -3,20 +3,10 @@ title: "🏌️ Binary golfing - Introduction"
 date: 2022-04-15 16:00:00
 tags: ["binary", "elf", "golf", "low-level"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
 draft: true
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: cover.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 > So [tmp.out](https://tmpout.sh) - once again - got me. Especially [netspooky](https://n0.lol/), wich wrote about golfing binaries. Instantly I was caught in golfing.

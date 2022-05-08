@@ -2,23 +2,9 @@
 title: "🚀 TL;DR - pacman"
 date: 2021-05-04 13:00:00
 summary: "The famous packet manager for Archlinux"
-tags:
-- archlinux
-- pacman
-- tldr
+tags: ["archlinux", "pacman", "tldr"]
+categories: ["TL;DR"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
 ---
 
 *I use Arch btw*

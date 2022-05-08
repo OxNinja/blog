@@ -2,21 +2,11 @@
 title: "📦 HTB - Cap"
 date: 2021-07-28 16:00:00
 tags: ["htb", "writeup"]
+categories: ["HTB"]
 author: "0xNinja"
-showToc: true
-TocOpen: false
-draft: false
-hidemeta: false
-comments: false
-disableShare: false
-disableHLJS: false
-hideSummary: false
-searchHidden: true
-ShowReadingTime: true
-ShowBreadCrumbs: true
-ShowPostNavLinks: true
-cover:
-    image: box.png
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 ---
 
 > Simple easy box, perfect to warmup before the FIC 2021 and get more confidence in 1337 h4ck1n9
