@@ -100,4 +100,12 @@ git stash
 
 # config your git variables
 git config user.name PouetPouet
+
+# mutli authors
+git commit -m "My commit message
+You can add co-authors to a commit by adding one line by author like so:
+(note the mandatory 2 empty lines)
+
+
+Co-authored-by: username <user@example.com>"
 ```
