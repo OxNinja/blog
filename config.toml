@@ -312,7 +312,7 @@ enableEmoji = true
       # whether to show the copy button of the code block
       copy = true
       # the maximum number of lines of displayed code by default
-      maxShownLines = 30
+      maxShownLines = 50
     # KaTeX mathematical formulas config (KaTeX https://katex.org/)
     [params.page.math]
       enable = true
