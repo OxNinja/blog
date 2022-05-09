@@ -2,7 +2,7 @@
 
 
 {{< admonition note >}}
-This is the second part of my series about creatating a custom virtual machine: [part 1 - assembly VM](/assembly-vm).
+This is the second part of my series about creating a custom virtual machine: [part 1 - assembly VM](/assembly-vm).
 {{< /admonition >}}
 
 **The code is here: https://github.com/OxNinja/C-VM**
