@@ -101,6 +101,11 @@ git stash
 # config your git variables
 git config user.name PouetPouet
 
+# sign off a commit
+# some opensource project require you to sign your commits, see
+# https://stackoverflow.com/a/1962112
+git commit -s -m "My commit message"
+
 # mutli authors
 git commit -m "My commit message
 You can add co-authors to a commit by adding one line by author like so:
