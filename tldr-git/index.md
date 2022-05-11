@@ -86,8 +86,11 @@ git push
 # update your submodules
 git submodule update --remote --merge
 
-# delete a commit
-git commit -amend
+# delete a local commit
+git reset HEAD~
+
+# modify a local commit
+git commit --amend
 
 # temporary discard your local changes
 git stash
