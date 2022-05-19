@@ -243,7 +243,7 @@ int main(void) {
 {{< admonition success "Thanks" >}}
 Special thanks to:
 
-* [Masterfox](): for helping me debugging my issues with pointers and structs
-* [Nofix](): for helping me debugging my array of pointers of functions stuff
+* [Masterfox](https://github.com/MaitreRenard): for helping me debugging my issues with pointers and structs
+* [Nofix](https://nofix.re/): for helping me debugging my array of pointers of functions stuff
 {{< /admonition >}}
 
