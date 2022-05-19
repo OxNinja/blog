@@ -1,9 +1,12 @@
 # Projects
 
 
-> I made some projects, some are very interesting, and some are more for learning purposes or testing. I listed here the ones I am the more proud of, but you can get a more exhaustive list by looking here:
-> * https://github.com/OxNinja
-> * https://git.fakenews.sh
+{{< admonition tip "For information" >}}
+I made a few projects, some are very interesting, and some are more for learning purposes or testing. I listed here the ones I am the more proud of, but you can get a more exhaustive list by looking here:
+
+* https://github.com/OxNinja
+* https://git.fakenews.sh
+{{< /admonition >}}
 
 ## [CTF Kit](https://git.fakenews.sh/ctfkit/ctfkit) (mirrored on [Github](https://github.com/Team-FakeNews/CTFKit))
 
