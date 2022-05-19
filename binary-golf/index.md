@@ -102,7 +102,6 @@ filesize equ $-$$
 And the version for 64 bits (taken [from here](https://stackoverflow.com/a/53383541)):
 
 ```asm
-; Self modifying ELF
 bits 64
 org 0x8000000
 
