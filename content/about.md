@@ -8,11 +8,11 @@ showDate: false
 
 French engineering student in cybersecurity, I like the web, reverse, crafting ELF and assembly.
 
-I participate in CTFs with my team [FakeNews](https://fakenews.sh). I mostly do the web challenge because this is the easiest when you begin in cybersecurity. :innocent:
+I participate in CTFs on my own or with friends. I mostly do the web challenge because this is the easiest when you begin in cybersecurity. :innocent:
 
 * [CTF InterIUT 2020](https://twitter.com/CTF_Inter_IUT) staff 🏁
 * [Norzh CTF 2021](https://norzh-ctf.fr) staff 🧭
-* [Comming soon] staff 🏦
+* [FakeCTF](https://ctf.fakenews.sh) staff 🏦
 
 # Why this website
 
