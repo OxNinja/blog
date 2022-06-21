@@ -85,6 +85,30 @@ neg      rax
 
 This code was a bit tricky, after discussing with friends we agreed to say that this code tells if `rax` is different than `0`.
 
-At first I said that it tells the sign of `rax`, but I missunderstood the `sbb` instruction.
+At first I said that it tells the sign of `rax`, but I missunderstood the `sbb` instruction, but I was wrong and overlooked the computing of the `sbb rax, rax`.
+
+This code requires to look at `neg` at first, despite of switching the sign of the target, it also sets the carry flag `CF` accordingly with the sign.
+
+We can now dig `sbb`, its code can be:
+
+```asm
+sbb:
+    ; rax is argv[0]
+    ; rbx is argv[1]
+    mov r8, rax
+    add r8, CF
+    sub rbx, r8
+```
+
+By looking at the possible output values, we van see that it is a substraction by either `rax + 0` or `rax + 1` of `rbx`. Given that in this code, we have `sbb rax, rax`, we can sse that we will only get `rax = rax - (rax + CF)`, with `CF` at `0` or `1`, thus the output of the instruction is either `0` or `1`, corresponding to the initial sign of `rax`.
+
+## 0x03
+
+```asm
+sub      rdx,rax
+sbb      rcx,rcx
+and      rcx,rdx
+add      rax,rcx
+```
 
 
