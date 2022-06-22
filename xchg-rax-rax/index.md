@@ -111,4 +111,23 @@ and      rcx,rdx
 add      rax,rcx
 ```
 
+With the previous experiences we now know about all the above instructions, we can deduce the behaviour of the code, which can be coded in a more high-level language like Python:
+
+```py
+def my_func(rax, rdx):
+  if rax > rdx:
+    rax += rdx
+```
+
+Yes, this is that simple. The tricky part comes from the `sbb` and `and` part.
+
+* `sub rdx, rax` stores the difference in `rdx`, and sets the `CF` if needed.
+* `sbb rcx, rcx` sets `rcx` to `neg CF` (either `0` or `0xffffffff`)
+* `and rcx, rdx`
+    - If `rax` was lower than `rdx` at line 1: `rcx` would be `0` and then the `and` sill still set `rcx` to `0`
+    - If `rax` was greater than `rdx` at line 1: `rcx` would be `0xffffffff` and so, `rcx` becomes the value of `rdx`
+* `add rax, rcx` is trivial now
+
+So `0x03` adds `rdx` to `rax` if `rax > rdx`.
+
 
