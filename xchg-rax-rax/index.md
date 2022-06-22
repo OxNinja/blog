@@ -130,4 +130,27 @@ Yes, this is that simple. The tricky part comes from the `sbb` and `and` part.
 
 So `0x03` adds `rdx` to `rax` if `rax > rdx`.
 
+## 0x04
+
+```asm
+xor      al,0x20
+```
+
+This code was pretty simple to test, I was unsure of the exact behaviour of it, so I tested it:
+
+```py 
+for x in range(255):
+  print(chr(x), chr(x ^ 0x20))
+```
+
+And as you can see by executing this code, the printable characters have their case swapped: lowercase letters become upperccase, and vice-versa.
+
+## 0x05
+
+```asm
+sub      rax,5
+cmp      rax,4
+```
+
+
 
