@@ -152,5 +152,39 @@ sub      rax,5
 cmp      rax,4
 ```
 
+This code is so tiny that it seems complex, but fear not, I think I have the solution for it. This code shows the similarities and difference beteween `sub` and `cmp`.
 
+* `sub rax, 5` actually overwrites the value of `rax`
+* `cmp rax, 4` computes `sub rax, 4` and only stores the result in the flags, `rax` is not modified
+
+## 0x06
+
+```asm
+not      rax
+inc      rax
+neg      rax
+```
+
+This code teaches the trick for those instructions:
+
+* `not rax` does the two's-complement for the value -> `not 0x5 = 0xfffa`
+* `inc rax; neg rax` does the same -> `neg 0x6 = 0xfffa`
+
+## 0x07
+
+```asm
+inc      rax
+neg      rax
+inc      rax
+neg      rax
+```
+
+This code shows us that the `inc; neg` is symetric: doing it twice leads us to the original value. Which is pretty logic as `inc; neg` is the same as `neg`.
+
+## 0x08
+
+```asm
+add      rax,rdx
+rcr      rax,1
+```
 
