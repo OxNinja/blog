@@ -196,3 +196,58 @@ This code shows us that the `inc; neg` is symetric: doing it twice leads us to t
 add      rax,rdx
 rcr      rax,1
 ```
+
+`rcr` is not quite common, it rotates the bits to the right.
+
+In fact, there is stuff hapenning with the `CF` but I will skip this part as it is too long.
+
+## 0x09
+
+```asm
+shr      rax,3
+adc      rax,0
+```
+
+`shr` is a right shift of bits, with storing into `CF` for overflowing last bit. This does the same as dividing by `2^n`, with `shr rax, n`.
+
+`adc` is `add` with the `CF` in addition:
+
+```asm
+; rax is argv[1]
+; rbx is argv[2]
+adc:
+  add rax, rbx
+  add rax, CF
+```
+
+So here the code divides `rax` by `8 (2^3)` and if the 3rd bit was 1, it increases `rax`, we can rewrite this code in Python to make things clearer:
+
+```py 
+def nine(a):
+  cf = a & 0b100
+  result = a / 3 
+  result += cf
+  return result
+```
+
+## 0x0a
+
+```asm
+    add      byte [rdi],1
+.loop:
+    inc      rdi
+    adc      byte [rdi],0
+    loop     .loop
+```
+
+Now it gets a bit interesting.
+
+`add byte [rdi], 1` increases the value of what is pointed by the address at `rdi`.
+
+`inc rdi` adds `1` to `rdi` **without modifing the `CF`**.
+
+`adc byte [rdi], 0` writes the content of `CF` at the address pointed by `rdi`.
+
+`loop .loop` -> `dec cx; jmp short .loop`.
+
+My guess here is that it sets every bytes in memory (at the address pointed by `rdi`) to the content of `CF`. The size of the memory is `rcx`, and the first byte is set to `1` in order to identify the chunck (like a start bit in telecommunications).
