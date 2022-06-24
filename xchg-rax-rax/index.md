@@ -83,7 +83,7 @@ sbb      rax,rax
 neg      rax
 ```
 
-This code was a bit tricky, after discussing with friends we agreed to say that this code tells if `rax` is different than `0`.
+This code was a bit tricky, after discussing with friends ([xThaz](https://xthaz.fr) & [SoEasY](https://www.soeasy.re)) we agreed to say that this code tells if `rax` is different than `0`.
 
 At first I said that it tells the sign of `rax`, but I missunderstood the `sbb` instruction, but I was wrong and overlooked the computing of the `sbb rax, rax`.
 
