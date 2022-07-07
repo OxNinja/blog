@@ -215,6 +215,71 @@ I made the choice to use a constant-sized instruction set, to help me parsing ea
 
 Once this logic has been declared, there was one thing left to do: actually parsing the instructions. In fact, as you may have noticed in my instruction functions (`my_mov() my_add()...`), I used binary masking and shifting like so: `(a && 0xff) >> 0x10`.
 
+### Stack implementation
+
+This is propably the most difficult thing in this project for me, as I had to figure out how to implement a virtual stack and related stuff.
+
+I first thought about using a pointer to a `malloc`ed chunck as the stack, where I could store pointers to the values, so here is the struct:
+
+```c
+typedef struct Stack {
+  // LIFO stack
+
+  // max size of the stack
+  int max_size;
+
+  // pointers for the stack
+  int *stack, *stack_base, *stack_end, **stack_pointer;
+  
+} Stack;
+```
+
+A few explanations about this propably cursed struct:
+
+* `max_size` is the size of the stack (max number of pointer that could be stored in it).
+* `*stack` is a pointer to the allocated chunk in memory to store the pointers.
+* `*stack_base` is a pointer to the base of the stack (the first place to store pointers at).
+* `*stack_end` is a pointer to the end of the stack (the limit of its size).
+* `**stack_pointer` is a pointer of the current "cursor" in the stack, pointing to the stored pointer in it.
+
+{{< mermaid >}}
+flowchart LR
+  subgraph Stack
+    direction LR
+    subgraph *stack
+        direction LR
+        0x00 --> 0x55ff1111
+        0x08 --> 0x55ff2222
+        0x10 --> 0x55ff3333
+        0x18 --> 0x55ff4444
+        ... --> 0x...
+        max_size --> ???
+    end
+    **stack_pointer --> 0x18
+    *stack_base --> 0x00
+    *stack_3nd --> max_size
+  end
+{{< /mermaid >}}
+
+Feel free to visit the project's repo to check if I finished this implementation, but by now I am for sure struggling with this.
+
+In fact with this virtual stack the VM is now able to `push` & `pop` and al that stuff, here is how I implemented them:
+
+```c
+void my_push(Registers *regs, Stack *stack, int shellcode) {
+  // get the value to push
+  int value = shellcode & 0x00ffffff;
+  // get a pointer to the value
+  int *pointer = &value;
+  // make the stack pointer pointing to the pointer :brain: :point_right: :point_left:
+  *stack->stack_pointer = pointer;
+  // increment the cursor for the top of the stack
+  stack_inc(stack);
+}
+```
+
+The same goes for the `pop`, except that we first decrement the stack pointer index, as we incremented it last, and then we store the value pointed into the corresponding register.
+
 ## Demo time
 
 I used the following code:
