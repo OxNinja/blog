@@ -251,3 +251,17 @@ Now it gets a bit interesting.
 `loop .loop` -> `dec cx; jmp short .loop`.
 
 My guess here is that it sets every bytes in memory (at the address pointed by `rdi`) to the content of `CF`. The size of the memory is `rcx`, and the first byte is set to `1` in order to identify the chunck (like a start bit in telecommunications).
+
+## 0x0b
+
+```asm
+not      rdx
+neg      rax
+sbb      rdx,-1
+```
+
+Here I got stuck for at least one hour, and because we had already seen all instructions, I did not bothered re-reading the documentation. It is pointless to read something twice, right?
+
+So after calling the joker "coworker help", we saw that `neg` does not only the 2-complement of the register, but also sets `CF` to `1` if the register is not `0`. Remember to always double check what you read, especially documentation.
+
+So this code invert all bits of `rdx`, and if `rax` is not `0`, it will decrement `rdx` by `1`.
