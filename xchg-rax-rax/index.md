@@ -257,3 +257,25 @@ So after calling the joker "coworker help", we saw that `neg` does not only the 
 
 So this code invert all bits of `rdx`, and if `rax` is not `0`, it will decrement `rdx` by `1`.
 
+## 0x0c
+
+```asm
+mov      rcx,rax
+xor      rcx,rbx
+ror      rcx,0xd
+
+ror      rax,0xd
+ror      rbx,0xd
+xor      rax,rbx
+
+cmp      rax,rcx
+```
+
+Despite the number of lines, this code was very easy to understand, in fact I was even able to guess (CTF player strenght here) the behaviour of it within a few seconds.
+
+The code acts in two steps, and demonstrates that a `ror` + `xor` is the same as a `xor` + `ror`.
+
+The first 3 lines copies `rax` into `rcx` and `xor rcx, rbx`, and then does a `ror rcx, 0xd`. The other next 3 lines does the opposite: `ror rax, 0xd` (and also `ror rbx, 0xd`) and `xor rax, rbx`.
+
+Finally we see that both `rax` and `rcx` have the same value. Proving that `ror;xor` is commutative.
+
