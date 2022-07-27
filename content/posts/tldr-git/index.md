@@ -117,3 +117,5 @@ You can add co-authors to a commit by adding one line by author like so:
 
 Co-authored-by: username <user@example.com>"
 ```
+
+For more tricks: [ohshitgit.com](https://ohshitgit.com/)
