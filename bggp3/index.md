@@ -166,7 +166,7 @@ The bad part was also that I only had like 8-12 exec/s, which is very slow. And 
 
 It was not my fault, right?
 
-So I decided to switch of target. I went for Python 3.8. After building it, making test cases and min them, a day passed, and I started to fuzz ing for the night. Nothing after hours, not even a new find. There was a problem somewhere. It must be Python, I was thinking. Of course it was Python the problem, not me.
+So I decided to switch of target. I went for Python 3.8. After building it, making test cases and min them, a day passed, and I started to fuzz for the night. Nothing after hours, not even a new find. There was a problem somewhere. It must be Python, I was thinking. Of course it was Python the problem, not me.
 
 I switched of target many times, here is what I tried (you can try yourself to fuzz them if you want):
 
@@ -198,7 +198,7 @@ I decided to take a break for days.
 
 ### Act VI: testing
 
-After my break I wanted to know why I did not have any results with my fuzzing. And for me the obvious reasons was that it was an issue of the famous layer 8 of the OSI model: the keyboard-chair interface.
+After my break I wanted to know why I did not have any results with my fuzzing. And for me the obvious reason was an issue of the famous 8th layer of the OSI model: the keyboard-chair interface.
 
 For my previous choices, either it was a bad target, or I did things wrong.
 
@@ -210,11 +210,11 @@ Now that you have the past history of the project, see the real [fuzzing journey
 
 ## Conclusion
 
-Points :
+**Points:**
 
 * 4096 - 4 = 4092
 * +1024 for writeup
 * +4096 for patch
 
-Total: `9212`pts
+**Total: `9212`pts**
 
