@@ -35,7 +35,7 @@ I thought this project was in the spirit of the minimalism, and thus wanted to s
 
 Especialy design for embeeded devices and IoT, still maintained after more than 7 years, this project was a good practice for fuzzing.
 
-## Intrumentation
+## Instrumentation
 
 {{< admonition note >}}
 For this fuzzing project, I used the AFL++ Docker container, mapping the code of the target in `/src`.
@@ -51,7 +51,7 @@ The first step for fuzzing, we have to prepare the target binary. ALF uses a cus
 + CC = afl-gcc
 ```
 
-In more complex project, you will have to also change the compiler to `alf-clang-fast++`, add some compilation flags for optimizations, and even have to patch the `main() {}` function for ALF.
+In more complex project, you will have to also change the compiler to `alf-clang-fast++`, add some compilation flags for optimizations, and even have to patch the `main() {}` function for AFL.
 
 On compilation you should see some warnings/infos from AFL:
 
@@ -118,14 +118,14 @@ Within a few minutes I got a crash on the binary with fuzzing, and I got hundred
 
 The first crashes were "only" some SEGFAULT, and the files were also already a bit tiny: **79 bytes for a crash**.
 
-So my first crash was due to the following file:
+So my first crash was due to the following file (base64):
 
 ```base64
 ZnVuY3Rpb64gZigpIHsKfQoKYSA9IFsKICB2b2lkIDAsCiAgdm9pZCBmLAogIHZvaWQgZigpCl07
 CgpyZXN1bHQgPSBhID09ICIsLCI7Cg==
 ```
 
-Which was on fact this payload:
+Which gives:
 
 ```js
 functio f() {
@@ -140,11 +140,13 @@ a = [
 result = a == ",,";
 ```
 
-This code crashes Espruino with no error message, only a SEGFAULT. My guess here was that the parsing code had an issue with the `functio f() {}` part, and crashes the program.
+This code crashes Espruino with no error message, only a SEGFAULT. My guess here was that the parsing code had an issue with the `functio f() {}` part, and crashes the program, maybe a lexer issue due to invalid token?
 
-After some time a managed to minimize the payload to **4 bytes**: `da5sCg==` or `75ae 6c0a` dumped.
+{{< admonition success "Final payload" >}}
+After some time I managed to minimize the payload down to **4 bytes**: `da5sCg==` or in hex `75ae 6c0a`. So I have here a 4-bytes SEGFAULT.
+{{< /admonition >}}
 
-I also got one buffer overflow of 1.5kB but I never managed to reproduce it on any other system, I concluded that this was a glitch in the matrix.
+I also got one buffer overflow of 1.5kB but I never managed to reproduce it on any other system, I concluded that this was a glitch in the matrix and cried a lot, because usualy you only get SEGFAULT or SIG_ABORT crashes, a BoF would have been the cherry on top.
 
 But I got a lot of crashes tho:
 
@@ -154,7 +156,7 @@ But I got a lot of crashes tho:
 
 With only 4 bytes there was only a few bytes of improvement possible, so I decided to dig into the bug. Too bad that this caused only a SEGFAULT.
 
-After some time of code analysis, patching, guessing and compiling, I managed to patch the bug in an ugly way, but made a pull request anyways, which was not merged, but instead the developpers made an other patch in order to fix this. So I guess this counts?
+After some time of code analysis, coding, guessing and compiling, I managed to patch the bug in an ugly way, but made a pull request anyways, which was not merged, but instead the developpers made an other patch in order to fix this. So I guess this counts?
 
 [Link of the final patch](https://github.com/espruino/Espruino/commit/4cce3caa21c8ae5b8f7f4441379b65d777aa3164).
 
