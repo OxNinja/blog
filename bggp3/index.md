@@ -19,9 +19,11 @@ The first tutorials online and my own knowledge led me to the famous `AFL`, or m
 If you want to follow my journey in the real events timeline, [click here](#struggles-or-real-history).
 {{< /admonition >}}
 
-Looking by curiosity what are all the known JavaScript engines (and there are a lot of them), one caught my attention: REDACTED.
+Looking by curiosity what are all the known JavaScript engines (and there are a lot of them), one caught my attention: [Espruino](https://github.com/espruino/espruino).
 
 I thought this project was in the spirit of the minimalism, and thus wanted to see if it was enough to avoid crashes.
+
+Especialy design for embeeded devices and IoT, still maintained after more than 7 years, this project was a good practice for fuzzing.
 
 ## Intrumentation
 
@@ -85,7 +87,7 @@ As simple as that:
 afl-fuzz -i min -o out -- $TARGET @@
 ```
 
-We can also add the `-D` options for mutating random bytes in the payload.
+We can also add the `-D` options for mutating random bytes in the payload, and it is recommanded for better results, despite of increasing by a lot the time of fuzzing.
 
 {{< admonition tip "Pro tips for fuzzing" >}}
 You can multithread AFL:
@@ -100,10 +102,51 @@ afl-fuzz -S name2 -- $TARGET @@
 The processes will communicate together and trade their payloads.
 {{< /admonition >}}
 
-
 ## Getting a crash
 
+Within a few minutes I got a crash on the binary with fuzzing, and I got hundreds the first day, pretty nice.
+
+The first crashes were "only" some SEGFAULT, and the files were also already a bit tiny: **79 bytes for a crash**.
+
+So my first crash was due to the following file:
+
+```base64
+ZnVuY3Rpb64gZigpIHsKfQoKYSA9IFsKICB2b2lkIDAsCiAgdm9pZCBmLAogIHZvaWQgZigpCl07
+CgpyZXN1bHQgPSBhID09ICIsLCI7Cg==
+```
+
+Which was on fact this payload:
+
+```js
+functio f() {
+}
+
+a = [
+  void 0,
+  void f,
+  void f()
+];
+
+result = a == ",,";
+```
+
+This code crashes Espruino with no error message, only a SEGFAULT. My guess here was that the parsing code had an issue with the `functio f() {}` part, and crashes the program.
+
+After some time a managed to minimize the payload to **4 bytes**: `da5sCg==` or `75ae 6c0a` dumped.
+
+I also got one buffer overflow of 1.5kB but I never managed to reproduce it on any other system, I concluded that this was a glitch in the matrix.
+
+But I got a lot of crashes tho:
+
+![](goodbye.png)
+
 ## Bonus points
+
+With only 4 bytes there was only a few bytes of improvement possible, so I decided to dig into the bug. Too bad that this caused only a SEGFAULT.
+
+After some time of code analysis, patching, guessing and compiling, I managed to patch the bug in an ugly way, but made a pull request anyways, which was not merged, but instead the developpers made an other patch in order to fix this. So I guess this counts?
+
+[Link of the final patch](https://github.com/espruino/Espruino/commit/4cce3caa21c8ae5b8f7f4441379b65d777aa3164).
 
 ## Struggles (or real history)
 
@@ -164,4 +207,12 @@ The only way forward for me was to find an other target, and see if I get a cras
 Now that you have the past history of the project, see the real [fuzzing journey](#chosing-target).
 
 ## Conclusion
+
+Points :
+
+* 4096 - 4 = 4092
+* +1024 for writeup
+* +4096 for patch
+
+Total: `9212`pts
 
