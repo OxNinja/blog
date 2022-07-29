@@ -142,6 +142,8 @@ But I got a lot of crashes tho:
 
 ![](goodbye.png)
 
+(Don't mind the low amount of exec/s here, the first day I got ~100 exec/s but with time it decreased due to the size of the payloads in the corpus)
+
 ## Bonus points
 
 With only 4 bytes there was only a few bytes of improvement possible, so I decided to dig into the bug. Too bad that this caused only a SEGFAULT.
