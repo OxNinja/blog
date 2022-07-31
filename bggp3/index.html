@@ -31,7 +31,7 @@ What is fuzzing? Fuzzing a binary is like bruteforcing a binary&rsquo;s input (c
 </span></span><span class=line><span class=cl>mkdir out <span class=c1># outputs of the fuzzer (crashes, test queue...)</span>
 </span></span></code></pre></td></tr></table></div></div><h2 id=minimizing-test-cases>Minimizing test cases</h2><p>The next step is to get good test cases to speed up the process of fuzzing. The fuzzer will base its mutations on those test cases, so the more unique tests you have, the better.</p><p>By chance, most projects have good tests in their <code>/tests/</code> directory, so let&rsquo;s copy them to our inputs:</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>cp /src/tests/*.js in/
-</span></span></code></pre></td></tr></table></div></div><p>Once again, for optimizations, it is a good practice to minimize the test cases, it can same a lot of time during fuzz.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></span></code></pre></td></tr></table></div></div><p>Once again, for optimizations, it is a good practice to minimize the test cases, it can save a lot of time during fuzz.</p><div class=highlight><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4

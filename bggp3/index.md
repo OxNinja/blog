@@ -65,7 +65,7 @@ By chance, most projects have good tests in their `/tests/` directory, so let's 
 cp /src/tests/*.js in/
 ```
 
-Once again, for optimizations, it is a good practice to minimize the test cases, it can same a lot of time during fuzz.
+Once again, for optimizations, it is a good practice to minimize the test cases, it can save a lot of time during fuzz.
 
 ```bash
 mkdir min # our minimized inputs
