@@ -13,7 +13,7 @@ resources:
 
 So this summer - and it has been this for the past 2 years - the famous [Binary Golfing Grand Prix](https://tmpout.sh/bggp/3/) took place online for it's 3rd edition, and of course I decided to give it a try.
 
-After getting to try my best at golfing binaries ([see my golfing posts](/tags/golf/)), I had to race this competition for fun and learn a lot about fuzzing.
+After getting to try my best at golfing binaries ([see my golfing posts](/tags/golf/)), I had to race this competition for fun and learn a lot about fuzzing - as I have never fuzzed before.
 
 ## What is fuzzing?
 
