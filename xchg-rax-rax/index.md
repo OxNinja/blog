@@ -279,3 +279,46 @@ The first 3 lines copies `rax` into `rcx` and `xor rcx, rbx`, and then does a `r
 
 Finally we see that both `rax` and `rcx` have the same value. Proving that `ror;xor` is commutative.
 
+## 0x0d
+
+```asm
+mov      rdx,rbx
+
+xor      rbx,rcx
+and      rbx,rax
+
+and      rdx,rax
+and      rax,rcx
+xor      rax,rdx
+
+cmp      rax,rbx
+```
+
+This does the same as [0x0c](#0x0c) but for `xor; and` & `and; xor`. Nothing really outstanding.
+
+## 0x0e
+
+```asm
+mov      rcx,rax
+and      rcx,rbx
+not      rcx
+
+not      rax
+not      rbx
+or       rax,rbx
+
+cmp      rax,rcx
+```
+
+Same goes for `and; not` & `not; or`.
+
+## 0x0f
+
+```asm
+.loop:
+    xor      byte [rsi],al
+    lodsb
+    loop     .loop
+```
+
+
