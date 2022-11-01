@@ -253,7 +253,7 @@ flowchart LR
 
 Feel free to visit the project's repo to check if I finished this implementation, but by now I am for sure struggling with this.
 
-In fact with this virtual stack the VM is now able to `push` & `pop` and al that stuff, here is how I implemented them:
+In fact with this virtual stack the VM is now able to `push` & `pop` and all that stuff, here is how I implemented them:
 
 ```c
 void my_push(Registers *regs, Stack *stack, int shellcode) {
