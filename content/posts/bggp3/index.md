@@ -222,10 +222,6 @@ Now that you have the past history of the project, see the real [fuzzing journey
 
 ## Conclusion
 
-**Points:**
+I made 11th out of 33 and I am very happy about that
 
-* 4096 - 4 = 4092
-* +1024 for writeup
-* +4096 for patch
-
-**Total: `9212`pts**
+[Here you will find the final results including all the submitted entries for this year!](https://github.com/netspooky/BGGP/tree/main/2022#scored-entries)
