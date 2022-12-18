@@ -5,7 +5,6 @@ summary: ""
 tags: ["bggp", "low-level", "reverse", "golf", "js", "fuzz"]
 categories: ["Binary golfing"]
 author: "0xNinja"
-draft: true
 resources:
 - name: "featured-image"
   src: "featured-image.png"
