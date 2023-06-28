@@ -9,7 +9,7 @@ resources:
   src: "featured-image.png"
 ---
 
-> So [tmp.out](https://tmpout.sh) - once again - got me. Especially [netspooky](https://n0.lol/), wich wrote about golfing binaries. Instantly I was caught in golfing.
+> So [tmp.out](https://tmpout.sh) - once again - got me. Especially [netspooky](https://n0.lol/), which wrote about golfing binaries. I was instantly caught in golfing.
 
 ## Binary golfing?
 
@@ -42,7 +42,11 @@ ld -m elf_i386 -nmagic file.o -o bin
 
 **Better:**
 
-To directly craft a binary: `nasm -f bin file.s`.
+```sh
+nasm -f bin file.s
+```
+
+To directly craft a binary from NASM file.
 
 ### Header
 
@@ -58,7 +62,7 @@ The smallest valid header I can think of might be:
 
 Considering the following:
 
-* `??`: garbage, so you can just use those bytes for shellcode
+* `??`: garbage, so you can just use those bytes for your code
 * `!!!! !!!!`: total size of the header, so it will depend on your code
 * `dead beef`: address of the entrypoint
 
