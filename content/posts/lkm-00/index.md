@@ -4,6 +4,8 @@ date: 2022-12-18T10:50:42+02:00
 summary: "How to create a basic Linux Kernel Module."
 tags: ["c", "lkm", "low-level"]
 categories: ["LKM"]
+series: ["LKM"]
+series_order: 1
 author: "0xNinja"
 ---
 
