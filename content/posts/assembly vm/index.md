@@ -6,6 +6,8 @@ tags: ["assembly", "low-level", "reverse"]
 categories: ["Custom VM"]
 author: "0xNinja"
 draft: true
+series: ["Custom VM"]
+series_order: 1
 resources:
 - name: "featured-image"
   src: "featured-image.png"
