@@ -12,9 +12,7 @@ resources:
 
 ## Forewords
 
-{{< admonition tip "Note" >}}
 So recently a coworker of mine showed a book about assembly poems, at first I was like "well this joke is very funny" and then I read the first page. 5 minutes later I ordered the same book for my own, and now that it has been received, I want to write my notes here.
-{{< /admonition >}}
 
 [There is an online and free version of the book.](https://www.xorpd.net/pages/xchg_rax/snip_00.html)
 
@@ -92,7 +90,7 @@ sbb      rax,rax
 neg      rax
 ```
 
-This code was a bit tricky, after discussing with friends ({{< person url="https://xthaz.fr" name="" nick="xThaz" text="Friend" picture="https://blobsvc.wort.lu/picture/f7ea4fe76f388eb367037d1f6e21e671/800/800/crop/0/109/440/357/wortv3/edd7ee043660c9283a832bb1c4257e6c4e8fffa0" >}} & {{< person url="https://www.soeasy.re/" name="" nick="SoEasY" text="Friend" picture="https://www.soeasy.re/wp-content/uploads/2021/05/cropped-1.png" >}}) we agreed to say that this code tells if `rax` is different than `0`.
+This code was a bit tricky, after discussing with friends (xThaz & SoEaSy) we agreed to say that this code tells if `rax` is different than `0`.
 
 At first I said that it tells the sign of `rax`, but I missunderstood the `sbb` instruction, but I was wrong and overlooked the computing of the `sbb rax, rax`.
 

@@ -24,9 +24,7 @@ The first tutorials online and my own knowledge led me to the famous `AFL`, or m
 
 ## Chosing target
 
-{{< admonition danger "Spoiler" >}}
 If you want to follow my journey in the real events timeline, [click here](#struggles-or-real-history).
-{{< /admonition >}}
 
 Looking by curiosity what are all the known JavaScript engines (and there are a lot of them), one caught my attention: [Espruino](https://github.com/espruino/espruino).
 
@@ -36,9 +34,7 @@ Especialy design for embeeded devices and IoT, still maintained after more than 
 
 ## Instrumentation
 
-{{< admonition note >}}
 For this fuzzing project, I used the AFL++ Docker container, mapping the code of the target in `/src`.
-{{< /admonition >}}
 
 The first step for fuzzing, we have to prepare the target binary. ALF uses a custom GCC in order to optimize results and explore the binary. We have to build the binary from source and patch the Makefile.
 
@@ -98,7 +94,6 @@ afl-fuzz -i min -o out -- $TARGET @@
 
 We can also add the `-D` options for mutating random bytes in the payload, and it is recommanded for better results, despite of increasing by a lot the time of fuzzing.
 
-{{< admonition tip "Pro tips for fuzzing" >}}
 You can multithread AFL:
 
 ```bash
@@ -109,7 +104,6 @@ afl-fuzz -S name2 -- $TARGET @@
 ```
 
 The processes will communicate together and trade their payloads.
-{{< /admonition >}}
 
 ## Getting a crash
 
@@ -141,9 +135,7 @@ result = a == ",,";
 
 This code crashes Espruino with no error message, only a SEGFAULT. My guess here was that the parsing code had an issue with the `functio f() {}` part, and crashes the program, maybe a lexer issue due to invalid token?
 
-{{< admonition success "Final payload" >}}
 After some time I managed to minimize the payload down to **4 bytes**: `da5sCg==` or in hex `75ae 6c0a`. So I have here a 4-bytes SEGFAULT.
-{{< /admonition >}}
 
 I also got one buffer overflow of 1.5kB but I never managed to reproduce it on any other system, I concluded that this was a glitch in the matrix and cried a lot, because usualy you only get SEGFAULT or SIG_ABORT crashes, a BoF would have been the cherry on top.
 
@@ -197,7 +189,7 @@ After trying dozens of projects to fuzz, I started to be a bit angry, or more pr
 
 In order to save myself of myself, I started to try a lot of things, with my newly gained experience in fuzzing, I decided to go back to my original idea: `radare2`.
 
-With that, I also read the manual and all the options for AFL++ in order to get better results, I even asked online for help, of course {{< person url="https://www.soeasy.re/" name="" nick="SoEasY" text="Friend" picture="https://www.soeasy.re/wp-content/uploads/2021/05/cropped-1.png" >}} DMed me to help. He wasted some time with me, and we supposed that the **low** amount of exec/s was due to the fact that I start `r2` in interactive mode, and the process limit itself to a certain amount of threads, so the time the process kill itself in order to spawn a new one, it limits a lot the number of execs.
+With that, I also read the manual and all the options for AFL++ in order to get better results, I even asked online for help, of course SoEaSy DMed me to help. He wasted some time with me, and we supposed that the **low** amount of exec/s was due to the fact that I start `r2` in interactive mode, and the process limit itself to a certain amount of threads, so the time the process kill itself in order to spawn a new one, it limits a lot the number of execs.
 
 He also asked me to try other binaries of the `radare2` suite, even to write a harness for a specific function to fuzz.
 

@@ -11,9 +11,7 @@ resources:
   src: "featured-image.png"
 ---
 
-{{< admonition note >}}
 This is the second part of my series about creating a custom virtual machine: [part 1 - assembly VM](/assembly-vm).
-{{< /admonition >}}
 
 **The code is here: https://github.com/OxNinja/C-VM**
 
@@ -315,9 +313,7 @@ int main(void) {
 
 ---
 
-{{< admonition success "Thanks" >}}
 Special thanks to:
 
 * [Masterfox](https://github.com/MaitreRenard): for helping me debugging my issues with pointers and structs
 * [Nofix](https://nofix.re/): for helping me debugging my array of pointers of functions stuff
-{{< /admonition >}}
