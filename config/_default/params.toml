@@ -47,8 +47,8 @@ smartTOCHideUnfocusedChildren = true
 
 [article]
   showDate = true
-  showViews = false
-  showLikes = false
+  showViews = true
+  showLikes = true
   showDateUpdated = false
   showAuthor = true
   showHero = true
@@ -59,7 +59,7 @@ smartTOCHideUnfocusedChildren = true
   showDraftLabel = true
   showEdit = true
   editURL = "https://github.com/OxNinja/blog"
-  editAppendPath = true
+  editAppendPath = false
   seriesOpened = false
   showHeadingAnchors = true
   showPagination = true
@@ -71,7 +71,7 @@ smartTOCHideUnfocusedChildren = true
   showTaxonomies = true
   showAuthorsBadges = true
   showWordCount = true
-  sharingLinks = [ "linkedin", "twitter"]
+  sharingLinks = ["linkedin", "twitter"]
 
 [list]
   showHero = false
@@ -114,13 +114,13 @@ smartTOCHideUnfocusedChildren = true
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyAySvpUrkh5vzy_Lr6kD9u3Jrf3FJqYnmw"
+  authDomain = "blog-2d248.firebaseapp.com"
+  projectId = "blog-2d248"
+  storageBucket = "blog-2d248.appspot.com"
+  messagingSenderId = "637278122701"
+  appId = "1:637278122701:web:b728d61259190cf5932f84"
+  measurementId = "G-6CL2XBRM3E"
 
 [fathomAnalytics]
   # site = "ABC12345"

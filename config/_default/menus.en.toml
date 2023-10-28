@@ -62,6 +62,17 @@
   pageRef = "about"
   weight = 50
 
+[[main]]
+  identifier = "mastodon"
+  pre = "mastodon"
+  url = "https://mastodon.social/@0xninja"
+  weight = 300
+
+[[main]]
+  identifier = "github"
+  pre = "github"
+  url = "https://github.com/OxNinja"
+  weight = 400
 
 # -- Footer Menu --
 # The footer menu is displayed at the bottom of the page, just before
