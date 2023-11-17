@@ -112,7 +112,8 @@ int main(void) {
 Work in progress
 {{< /alert >}}
 
-Wrote code for stack-related stuff (push, pop)
+Wrote code for stack-related stuff (push, pop).
 
 ## Step 5: test the whole
 
+TODO
