@@ -115,5 +115,3 @@ Work in progress
 Wrote code for stack-related stuff (push, pop).
 
 ## Step 5: test the whole
-
-TODO
