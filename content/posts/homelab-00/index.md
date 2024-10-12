@@ -7,7 +7,7 @@ categories: ["Homelab"]
 series: ["Homelab"]
 series_order: 1
 author: "0xNinja"
-draft: true
+draft: false
 ---
 
 Let me guide you through my journey for a simple homelab.
@@ -24,11 +24,11 @@ We want to go from a basic setup to something simple:
 |---|---|
 | {{< mermaid >}}
 flowchart TD
-    A[Internet] --> B[IAP box]
+    A[Internet] --> B[ISP box]
     B --> C[LAN]
 {{< /mermaid >}} | {{< mermaid >}}
 flowchart TD
-    A[Internet] --> B[IAP box]
+    A[Internet] --> B[ISP box]
     B --> C[pi-hole]
     C --> D[LAN]
 {{< /mermaid >}} |
@@ -37,7 +37,7 @@ Doing so will allow us to manage and customize our network using our pi-hole, it
 
 In the future I will show different setups and how I did them.
 
-## Setup your IAP box
+## Setup your ISP box
 
 In order to setup our network, we will need to do some tweaks:
 

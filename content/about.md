@@ -8,7 +8,7 @@ showDate: false
 
 French engineering student in cybersecurity, I like the web, reverse, crafting ELF and assembly.
 
-I participate in CTFs on my own or with friends. I mostly do the web challenge because this is the easiest when you begin in cybersecurity. :innocent:
+I participate in CTFs on my own or with friends. I mostly do the web challenges because this is the easiest when you begin in cybersecurity. :innocent:
 
 * [CTF InterIUT 2020](https://twitter.com/CTF_Inter_IUT) staff 🏁
 * [Norzh CTF 2021](https://norzh-ctf.fr) staff 🧭
@@ -22,7 +22,7 @@ The idea is to present subjects linked with security, for all levels (beginner t
 
 # MISC
 
-[Twitter](https://twitter.com/0x_Ninja)
+[Mastodon](https://mastodon.social/@0xninja)
 
 [GitHub](https://github.com/OxNinja)
 
